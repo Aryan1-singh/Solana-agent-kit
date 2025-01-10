@@ -21,7 +21,7 @@ export class SolanaService {
 
     const privateKey = new Uint8Array(privateKeyArray);
     const base58PrivateKey = bs58.encode(privateKey);
-    const rpcUrl = 'https://api.mainnet-beta.solana.com';
+    const rpcUrl = process.env.RPC_URL;
     
     this.connection = new Connection(rpcUrl);
     
